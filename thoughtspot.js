@@ -47,9 +47,7 @@ async function authenticate(username) {
         maxRedirects: 0
       }
     );
-    console.log(loginResp.headers);
     const cookie = loginResp.headers["set-cookie"].map(Cookie.parse);
-    console.log(cookie.toString());
   } catch (e) {
     console.error(e);
   }
